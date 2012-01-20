@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+<style type="text/css">
+
+table {
+	border-width: 1px;
+	border-spacing: 2px;
+	border-style: outset;
+	border-color: black;
+	border-collapse: separate;
+	background-color: rgb(255, 255, 240);
+}
+table th {
+	border-width: 1px;
+	padding: 0px;
+	border-style: none;
+	border-color: red;
+	background-color: white;
+	-moz-border-radius: ;
+}
+table td {
+	border-width: 1px;
+	padding: 0px;
+	border-style: none;
+	border-color: red;
+	background-color: white;
+	-moz-border-radius: ;
+}
+
+body {
+	font-family: Ubuntu, sans-serif;
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	text-aligh: center;
+	background-color: #64604B;
+}
+
+#wrap {
+	width: 500px;
+	text-align: left;
+	border: 0px;
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #7C7862;
+}
+
+h1,h2 {
+	color: #E3A92F;
+}
+
+#notice {
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	background-color: green;
+}
+#error {
+	background-color: red;
+}
+#complete {
+	color: #64604B;
+	text-decoration: line-through;
+}
+
+</style>

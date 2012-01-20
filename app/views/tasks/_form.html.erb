@@ -1,0 +1,5 @@
+<%= form_for [@list, @task] do |form| %>
+
+<p><%= form.text_field :description, :size => 60 %> <%= form.submit %></p>
+
+<% end %>

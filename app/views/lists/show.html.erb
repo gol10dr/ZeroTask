@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<h2><%= @list.name %></h2>
+<p><%= @list.description %></p>
+
+<ul>
+	<% @list.tasks.incomplete.each do |task| %>
+	
+	<div style="float: left; width: auto;"><li><%= task.description %> - <%= link_to 'Edit', edit_list_task_path(@list,task) %> | 
+		<%= link_to 'Delete', [task.list,task], 
+				:confirm => 'Are you sure?',
+				:method => :delete %> | </div>
+		<%= button_to "Complete", complete_task_path(@list.id, task.id) %></li>
+	
+	<% end %>
+
+<p><%= render "tasks/form" %></p>
+	
+</ul>
+
+<hr />
+
+<%= link_to "Back to task lists", lists_path(@list) %>
+
+<hr />
+<h2>Zeroed List</h2>
+<ul>
+	<% @list.tasks.completed.each do |task| %>
+	<div style="float: left; width: auto;"><li id="complete"><%= task.description %> - <%= link_to 'Delete', [task.list,task], 
+						:confirm => 'Are you sure?', 
+						:method => :delete %></div>
+	<%= button_to "Activate", incomplete_task_path(@list.id, task.id) %></li></li> 
+	<% end %>
+</ul>

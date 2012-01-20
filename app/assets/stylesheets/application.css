@@ -60,7 +60,10 @@ h1,h2 {
 	font-weight: bold;
 	background-color: green;
 }
-#error {
+#alert {
+	color: white;
+	text-align: center;
+	font-weight: bold;
 	background-color: red;
 }
 #complete {

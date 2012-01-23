@@ -18,7 +18,7 @@ class TasksController < ApplicationController
       flash[:notice] = "Task created!"
       redirect_to list_path(@list)
     else
-      flash[:alert] = "Task could not be created..."
+      flash[:error] = "Task could not be created..."
       redirect_to list_path(@list)
     end
   end
@@ -38,7 +38,7 @@ class TasksController < ApplicationController
       flash[:notice] = "Task updated successfully!"
       redirect_to list_path(@list)
     else
-      flash[:alert] = "Task could not be updated..."
+      flash[:error] = "Task could not be updated..."
       redirect_to list_path(@list)
     end
   end

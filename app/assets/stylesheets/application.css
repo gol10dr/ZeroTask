@@ -54,18 +54,28 @@ h1,h2 {
 	color: #E3A92F;
 }
 
+#notice, #error {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+	font-weight: bold;
+	padding: 8px;
+	margin: 8px auto 5px;
+	width: 80%;
+	
+}
 #notice {
-	color: white;
-	text-align: center;
-	font-weight: bold;
-	background-color: green;
+	color: #4F8A10;
+	border: thin solid #4F8A10;
+	background-color: #DFF2BF;		
 }
-#alert {
-	color: white;
-	text-align: center;
-	font-weight: bold;
-	background-color: red;
+
+#error {
+	color: #D8000C;
+	border: thin solid #D8000C;
+	background-color: #FFBABA;
 }
+
 #complete {
 	color: #64604B;
 	text-decoration: line-through;

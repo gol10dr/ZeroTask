@@ -9,7 +9,9 @@
 				:confirm => 'Are you sure?',
 				:method => :delete %> | </div>
 		<%= button_to "Complete", complete_task_path(@list.id, task.id) %></li>
-	
+		<% if @list.tasks.incomplete.size == 0 %>
+			<em>Add some tasks!</em>
+		<% end %>
 	<% end %>
 
 <p><%= render "tasks/form" %></p>

@@ -1,12 +1,8 @@
 <%= form_for @list do |form| %>
 	
-	<label>Name:
-		<p><%= form.text_field :name %></p>
-	</label>
+	<p>Name:  <%= form.text_field :name, :size => 75 %></p>
 	
-	<label>Description:
-		<p><%= form.text_field :description %></p>
-	</label>
+	<p>Description: <%= form.text_field :description, :size => 67 %></p>
 	
 	<p><%= form.submit %></p>
 

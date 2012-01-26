@@ -20,7 +20,7 @@ class ListsController < ApplicationController
       flash[:notice] = "List created!"
       redirect_to lists_path
     else
-      flash[:error] = "List could not be created, sorry..."
+      flash[:error] = @list.errors.full_messages
       redirect_to new_list_path
     end
   end
@@ -37,7 +37,7 @@ class ListsController < ApplicationController
       flash[:notice] = "List updated!"
       redirect_to lists_path
     else
-      flash[:error] = "Could not update list, sorry..."
+      flash[:error] = @list.errors.full_messages
       redirect_to edit_list_path(@list)
     end
   end

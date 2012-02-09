@@ -1,12 +1,12 @@
 <h1><center>Zero ToDo Lists</center></h1>
 
 <% @lists.each do |list| %>
+	<div id="item">
 	<h2><%= link_to list.name, list %></h2>
 	<p><%= list.description %> - <%= link_to "Edit", edit_list_path(list) %> | <%= link_to "Delete", list_path(list), :confirm => "Are you sure?", :method => :delete %></p>
-	
-<hr />
+</div>
 
 <% end %>
 
-<%= link_to "Add new List", new_list_path %>
+<%= link_to "Add new todo list", new_list_path %>
 	

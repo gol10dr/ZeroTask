@@ -39,6 +39,7 @@ body {
 	padding-top: 10px;
 	text-aligh: center;
 	background-color: #484038;
+	color: #484038;
 }
 
 #wrap {
@@ -61,6 +62,20 @@ body {
 	padding-top: 1px;
 	margin: 0 auto;
 	background-color: #64604B;
+}
+#item:hover {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	width: 450px;
+	text-align: center;
+	border: 0px;
+	padding-top: 1px;
+	margin: 0 auto;
+	background-color: #64605C;
+}
+
+a:link, a:visited {
+	color: #484038;
 }
 
 h1,h2 {

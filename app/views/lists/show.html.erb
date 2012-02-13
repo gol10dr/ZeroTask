@@ -2,15 +2,16 @@
 <p><%= @list.description %></p>
 
 <ul>
-	<% @list.tasks.incomplete.each do |task| %>
+	<% if @list.tasks.incomplete.size == 0 %>
+		<em>Add some tasks!</em>
+	<% else %>
+		<% @list.tasks.incomplete.each do |task| %>
 	
-	<div style="float: left; width: auto;"><li><%= task.description %> - <%= link_to 'Edit', edit_list_task_path(@list,task) %> | 
+		<div style="float: left; width: auto;"><li><%= task.description %> - <%= link_to 'Edit', edit_list_task_path(@list,task) %> | 
 		<%= link_to 'Delete', [task.list,task], 
 				:confirm => 'Are you sure?',
 				:method => :delete %> | </div>
 		<%= button_to "Complete", complete_task_path(@list.id, task.id) %></li>
-		<% if @list.tasks.incomplete.size == 0 %>
-			<em>Add some tasks!</em>
 		<% end %>
 	<% end %>
 

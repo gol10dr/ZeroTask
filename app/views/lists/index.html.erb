@@ -1,11 +1,15 @@
 <h1><center>Zero ToDo Lists</center></h1>
 
+<% if @lists.size == 0 %>
+	<p><em>Add some lists!</em></p>
+<% else %>
 <% @lists.each do |list| %>
 	<div id="item">
 	<h2><%= link_to list.name, list %></h2>
 	<p><%= list.description %> - <%= link_to "Edit", edit_list_path(list) %> | <%= link_to "Delete", list_path(list), :confirm => "Are you sure?", :method => :delete %></p>
 </div>
 
+<% end %>
 <% end %>
 
 <%= link_to "Add new todo list", new_list_path %>

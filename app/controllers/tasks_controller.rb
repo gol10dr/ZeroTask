@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   
  before_filter :list_find, :only => [:create, :new]
  before_filter :task_find, :only => [:show, :edit, :update, :destroy, :complete, :incomplete]
+ before_filter :current_user
  
   def list_find
     @list = List.find(params[:list_id])

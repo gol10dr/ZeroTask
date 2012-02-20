@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
 
   before_filter :list_find, :only => [:show, :edit, :update, :destroy]
+  before_filter :current_user
   
   def list_find
     @list = List.find(params[:id])

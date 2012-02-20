@@ -6,8 +6,16 @@ ZeroTask::Application.routes.draw do
 
   match 'lists/:list_id/tasks/:id/complete' => 'tasks#complete', :as => :complete_task
   match 'lists/:list_id/tasks/:id/incomplete' => 'tasks#incomplete', :as => :incomplete_task
+  
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
 
-  root :to => "lists#index"
+  root :to => "users#index" 
+  
+  resources :users
+  resources :sessions
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
